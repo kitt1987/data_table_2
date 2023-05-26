@@ -568,6 +568,10 @@ class DataTable2 extends DataTable {
         onSecondaryTap: onRowSecondaryTap,
         onSecondaryTapDown: onRowSecondaryTapDown,
         overlayColor: overlayColor,
+        mouseCursor: Theme.of(context)
+            .dataTableTheme
+            .dataRowCursor
+            ?.resolve({MaterialState.selected}),
         child: label,
       );
     }
